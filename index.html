@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="EM Projects builds thoughtful mobile apps. DiveIQ is a personal dive log with smart weight guidance for Android." />
+  <title>EM Projects — Mobile apps for divers and beyond</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/em-projects-logo.svg" width="40" height="40" alt="" />
+        EM Projects
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#apps">Apps</a>
+        <a href="diveiq.html">DiveIQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>EM Projects</h1>
+    <p class="tagline">Clear, practical mobile software — starting with tools that help divers plan and log smarter.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="diveiq.html">Explore DiveIQ</a>
+      <a class="btn btn-outline" href="index.html#apps">All apps</a>
+    </div>
+  </div>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p class="lead">
+        EM Projects develops Android applications focused on reliability and everyday usefulness.
+        Our first release, <strong>DiveIQ</strong>, helps recreational divers keep a personal dive log
+        and get weight recommendations that improve over time.
+      </p>
+    </section>
+
+    <section id="apps">
+      <h2>Apps</h2>
+      <p class="lead">Current and upcoming releases from EM Projects.</p>
+      <div class="card-grid">
+        <article class="card featured">
+          <span class="badge">Available</span>
+          <img class="card-app-logo" src="assets/app_logo-card.png" width="120" height="120" alt="DiveIQ app logo" />
+          <h3>DiveIQ</h3>
+          <p>
+            Personal dive log and weight assistant for a single diver profile.
+            Log dives, track gear and conditions, and receive guidance tuned to your experience.
+          </p>
+          <ul class="features">
+            <li>Dive log stored on your device</li>
+            <li>Weight recommendations from your profile and dives</li>
+            <li>Simple, professional interface</li>
+          </ul>
+          <a class="btn btn-secondary" href="diveiq.html">Learn more</a>
+        </article>
+
+        <article class="card">
+          <span class="badge badge-muted">Coming soon</span>
+          <div class="card-icon" aria-hidden="true">◇</div>
+          <h3>More from EM Projects</h3>
+          <p>
+            Additional apps are in planning. This site will list new releases,
+            support links, and privacy policies as they ship.
+          </p>
+          <a class="btn btn-outline" href="index.html#contact" style="border-color: var(--border); color: var(--ocean-dark);">Get in touch</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="lead">Questions about our apps, partnerships, or support.</p>
+      <div class="contact-block">
+        <a href="mailto:info@em-projects.com">info@em-projects.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> EM Projects. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="diveiq.html">DiveIQ</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="mailto:info@em-projects.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DiveIQ — Android dive log and weight guidance for a single diver profile. Built by EM Projects." />
+  <title>DiveIQ — Personal dive log &amp; weight assistant | EM Projects</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/em-projects-logo.svg" width="40" height="40" alt="" />
+        EM Projects
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#apps">Apps</a>
+        <a href="diveiq.html">DiveIQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header page-header--with-logo">
+    <p class="breadcrumb"><a href="index.html">EM Projects</a> / DiveIQ</p>
+    <img class="page-header-logo" src="assets/app_logo-card.png" width="180" height="180" alt="DiveIQ" />
+    <h1>DiveIQ</h1>
+    <p>Personal dive log and weight guidance for Android</p>
+  </div>
+
+  <main>
+    <section>
+      <h2>What is DiveIQ?</h2>
+      <p class="lead">
+        DiveIQ helps you log dives and get practical weight recommendations based on your body profile,
+        gear, water type, and how you felt in the water. It is designed as a <strong>single-user</strong> app:
+        one diver profile on your device, with data stored locally unless you choose future cloud features.
+      </p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul class="features">
+        <li>Create your diver profile (weight, height, certification, default gear)</li>
+        <li>Log dives with depth, duration, pressures, and buoyancy feedback</li>
+        <li>See recommended lead weight before and after each dive</li>
+        <li>Personal offset learning from valid dives over time</li>
+        <li>Dive history and dive details on your phone</li>
+        <li>Settings to update your profile and preferences</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Availability</h2>
+      <p>
+        DiveIQ is distributed on <strong>Google Play</strong> under the package name
+        <code>com.em_projects.diveiq</code>. Release timing and regions are listed on the store listing when published.
+      </p>
+      <p>
+        <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.em_projects.diveiq" rel="noopener noreferrer">
+          View on Google Play
+        </a>
+        <span style="color: var(--text-muted); font-size: 0.9rem; margin-left: 0.5rem;">(link active after listing is live)</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>For help, feedback, or bug reports:</p>
+      <div class="contact-block">
+        <a href="mailto:info@em-projects.com">info@em-projects.com</a>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted);">
+        Please include your Android version and a short description of the issue.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>
+        DiveIQ stores your dive and profile data <strong>on your device</strong>.
+        We use Firebase Analytics and Crashlytics to improve stability.
+        Read the full policy:
+      </p>
+      <p><a class="btn btn-secondary" href="privacy.html">Privacy policy</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> EM Projects · DiveIQ</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:info@em-projects.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Railway: deploy this repo with root directory "." (default).
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+restartPolicyType = "on_failure"
