@@ -49,7 +49,7 @@ Use **GitHub CLI** (`gh auth login`) or **SSH** if you prefer not to type a pass
 
 1. [railway.com](https://railway.com) → **New Project** → **Deploy from GitHub** → select **eyalmnm/WebSite**.
 2. Leave **Root Directory** empty (repo root is the site).
-3. Railway runs `npm install` and `npm start` (`serve` static files).
+3. Railway runs `npm install` and `node server.js` (static files via `serve-handler`).
 4. Add a custom domain (e.g. `em-projects.com`) under **Settings → Networking**.
 
 ### Play Console (after live URL)
