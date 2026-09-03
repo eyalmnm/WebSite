@@ -3,22 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="EM Projects builds thoughtful mobile apps. DiveIQ is a personal dive log with smart weight guidance for Android." />
-  <title>EM Projects — Mobile apps for divers and beyond</title>
+  <meta name="description" content="EM Projects builds software for diving and maritime use: DiveIQ for personal diving, DiveCenterIQ for dive centers (coming soon), and SeaIQ planned for later." />
+  <title>EM Projects — Software for diving and maritime use</title>
+  <link rel="canonical" href="https://em-projects.com/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EM Projects" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="EM Projects — Software for diving and maritime use" />
+  <meta property="og:description" content="EM Projects builds software for diving and maritime use: DiveIQ, DiveCenterIQ, and SeaIQ." />
+  <meta property="og:url" content="https://em-projects.com/" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
         <img class="brand-mark" src="assets/em-projects-logo.svg" width="40" height="40" alt="" />
         EM Projects
       </a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-      <nav class="nav" aria-label="Main">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="index.html#apps">Apps</a>
         <a href="diveiq.html">DiveIQ</a>
+        <a href="divecenteriq.html">DiveCenterIQ</a>
         <a href="privacy.html">Privacy</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -27,34 +36,34 @@
 
   <div class="hero">
     <h1>EM Projects</h1>
-    <p class="tagline">Clear, practical mobile software — starting with tools that help divers plan and log smarter.</p>
+    <p class="tagline">Software products for diving and maritime use — each application is built and operated separately.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="diveiq.html">Explore DiveIQ</a>
       <a class="btn btn-outline" href="index.html#apps">All apps</a>
     </div>
   </div>
 
-  <main>
+  <main id="main">
     <section id="about">
       <h2>About</h2>
       <p class="lead">
-        EM Projects develops Android applications focused on reliability and everyday usefulness.
-        Our first release, <strong>DiveIQ</strong>, helps recreational divers keep a personal dive log
-        and get weight recommendations that improve over time.
+        EM Projects develops software for divers, dive centers, and maritime use.
+        This site is a public overview of the product family. It does not host
+        product logins or customer data.
       </p>
     </section>
 
     <section id="apps">
       <h2>Apps</h2>
-      <p class="lead">Current and upcoming releases from EM Projects.</p>
+      <p class="lead">Current and upcoming products from EM Projects.</p>
       <div class="card-grid">
         <article class="card featured">
           <span class="badge">Available</span>
           <img class="card-app-logo" src="assets/app_logo-card.png" width="120" height="120" alt="DiveIQ app logo" />
           <h3>DiveIQ</h3>
           <p>
-            Personal dive log and weight assistant for a single diver profile.
-            Log dives, track gear and conditions, and receive guidance tuned to your experience.
+            Personal diving. A dive log and weight assistant for a single diver profile
+            on Android.
           </p>
           <ul class="features">
             <li>Dive log stored on your device</li>
@@ -67,19 +76,29 @@
         <article class="card">
           <span class="badge badge-muted">Coming soon</span>
           <div class="card-icon" aria-hidden="true">◇</div>
-          <h3>More from EM Projects</h3>
+          <h3>DiveCenterIQ</h3>
           <p>
-            Additional apps are in planning. This site will list new releases,
-            support links, and privacy policies as they ship.
+            Dive center management. A forthcoming platform for dive shop owners and
+            dive center managers. Not publicly available yet.
           </p>
-          <a class="btn btn-outline" href="index.html#contact" style="border-color: var(--border); color: var(--ocean-dark);">Get in touch</a>
+          <a class="btn btn-outline-on-light" href="divecenteriq.html">Learn more</a>
+        </article>
+
+        <article class="card">
+          <span class="badge badge-muted">Planned</span>
+          <div class="card-icon" aria-hidden="true">◇</div>
+          <h3>SeaIQ</h3>
+          <p>
+            Maritime / sailing. A future product in the EM Projects family.
+            Details will be published when planning is further along.
+          </p>
         </article>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p class="lead">Questions about our apps, partnerships, or support.</p>
+      <p class="lead">Questions about our products, partnerships, or support.</p>
       <div class="contact-block">
         <a href="mailto:info@em-projects.com">info@em-projects.com</a>
       </div>
@@ -91,15 +110,13 @@
       <p>© <span id="year"></span> EM Projects. All rights reserved.</p>
       <div class="footer-links">
         <a href="diveiq.html">DiveIQ</a>
+        <a href="divecenteriq.html">DiveCenterIQ</a>
         <a href="privacy.html">Privacy policy</a>
         <a href="mailto:info@em-projects.com">Contact</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
   <script src="js/main.js"></script>
 </body>
 </html>

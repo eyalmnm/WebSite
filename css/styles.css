@@ -464,8 +464,69 @@ section h3 {
   text-decoration: none;
 }
 
-/* Responsive nav */
-@media (max-width: 640px) {
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -100px;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: var(--ocean-dark);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+.btn-outline-on-light {
+  background: transparent;
+  color: var(--ocean-dark);
+  border-color: var(--border);
+}
+
+.btn-outline-on-light:hover {
+  border-color: var(--teal);
+  color: var(--ocean-medium);
+  background: transparent;
+}
+
+.muted-note {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+span.muted-note {
+  margin-left: 0.5rem;
+}
+
+p.muted-note {
+  margin-top: 1rem;
+}
+
+.nav a[aria-current="page"] {
+  color: var(--teal-light);
+}
+
+.page-header .badge-muted {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.nav a:focus-visible,
+.brand:focus-visible,
+.nav-toggle:focus-visible {
+  outline-color: var(--teal-light);
+}
+
+/* Responsive nav: hamburger earlier so five items stay usable */
+@media (max-width: 760px) {
   .nav-toggle {
     display: block;
   }

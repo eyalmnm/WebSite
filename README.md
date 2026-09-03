@@ -1,18 +1,52 @@
 # EM Projects website
 
-Static site for **EM Projects** and **DiveIQ**, served as a minimal **Node.js** app on [Railway](https://railway.com) (or any static host).
+Public corporate and product website for **EM Projects**. It is a marketing site only.
+
+This site is **not** a product application, **not** a backend, and **not** an authentication portal.
 
 **GitHub:** [github.com/eyalmnm/WebSite](https://github.com/eyalmnm/WebSite)
+
+## Architecture
+
+```
+EM Projects Website     →  public marketing site (this repo)
+DiveIQ                  →  separate product / application
+DiveCenterIQ            →  separate B2B product / application
+SeaIQ                   →  future product
+```
+
+The website must remain separate from all product applications. It does **not**:
+
+- access DiveIQ or DiveCenterIQ databases
+- share customer data or `/data` volumes
+- implement product authentication
+- serve as a backend for DiveCenterIQ or any other product
+
+See [docs/WEBSITE_ARCHITECTURE.md](docs/WEBSITE_ARCHITECTURE.md).
+
+## Product structure
+
+| Product | Role | Status on this site |
+|---------|------|---------------------|
+| DiveIQ | Personal diving | Available |
+| DiveCenterIQ | Dive center management | Coming soon |
+| SeaIQ | Maritime / sailing | Planned (coming later) |
+
+Do not present DiveCenterIQ or SeaIQ as live production services.
 
 ## Pages
 
 | File | URL | Purpose |
 |------|-----|---------|
-| `index.html` | `/` | Company hub, apps, contact |
+| `index.html` | `/` | Company hub, product family, contact |
 | `diveiq.html` | `/diveiq.html` | DiveIQ product page |
-| `privacy.html` | `/privacy.html` | Privacy policy (Google Play) |
+| `divecenteriq.html` | `/divecenteriq.html` | DiveCenterIQ (coming soon) |
+| `privacy.html` | `/privacy.html` | Privacy policy for **DiveIQ** |
+| `robots.txt` | `/robots.txt` | Crawler rules |
+| `sitemap.xml` | `/sitemap.xml` | Public page list |
+| `server.js` | `GET /health` | Railway health check (`{"status":"ok"}`) |
 
-## Local preview
+## Local development
 
 ```bash
 npm install
@@ -21,36 +55,22 @@ npm start
 
 Open http://localhost:3000
 
-## Push to GitHub
+Requires Node.js 18 or newer. There is no test suite and no bundler.
 
-First time (from this folder):
-
-```bash
-cd /Users/test/Projects/DiveIQ/WebSite
-git init
-git add .
-git commit -m "Initial EM Projects website"
-git branch -M main
-git remote add origin https://github.com/eyalmnm/WebSite.git
-git push -u origin main
-```
-
-Updates:
-
-```bash
-git add .
-git commit -m "Describe your change"
-git push
-```
-
-Use **GitHub CLI** (`gh auth login`) or **SSH** if you prefer not to type a password. Do not commit personal access tokens.
-
-## Deploy on Railway
+## Railway deployment
 
 1. [railway.com](https://railway.com) → **New Project** → **Deploy from GitHub** → select **eyalmnm/WebSite**.
 2. Leave **Root Directory** empty (repo root is the site).
-3. Railway runs `npm install` and `node server.js` (static files via `serve-handler`).
-4. Add a custom domain (e.g. `em-projects.com`) under **Settings → Networking**.
+3. Railway runs `npm install` and `node server.js` (see `railway.toml`).
+4. Health check: `GET /health` (`healthcheckPath = "/health"`). The site root `/` remains the public homepage.
+
+Do not point the health check at a product application or database.
+
+### Custom domain
+
+Add a custom domain (for example `em-projects.com`) under **Settings → Networking**.
+
+Canonical URLs, Open Graph tags, `robots.txt`, and `sitemap.xml` currently use `https://em-projects.com`. If the public domain changes, update those files together.
 
 ### Play Console (after live URL)
 
@@ -59,6 +79,12 @@ Use **GitHub CLI** (`gh auth login`) or **SSH** if you prefer not to type a pass
 | Website | `https://your-domain/` |
 | Privacy policy | `https://your-domain/privacy.html` |
 | Contact | `info@em-projects.com` |
+
+## Privacy
+
+`privacy.html` is the **DiveIQ** privacy policy (Google Play). It does not describe DiveCenterIQ data processing.
+
+**TODO:** Write a DiveCenterIQ-specific privacy policy before that product is offered to customers. Do not reuse the DiveIQ policy as if it covered DiveCenterIQ.
 
 ## Assets
 
