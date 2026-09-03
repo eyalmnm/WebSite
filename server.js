@@ -1,7 +1,10 @@
+const fs = require('fs');
 const http = require('http');
+const path = require('path');
 const handler = require('serve-handler');
 
 const port = Number(process.env.PORT) || 3000;
+const SITE_ROOT = path.resolve(__dirname);
 
 const SECURITY_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
@@ -34,11 +37,11 @@ const BLOCKED_PREFIXES = ['/node_modules', '/.git', '/docs'];
 
 function pathnameOf(url) {
   try {
-    const path = new URL(url, 'http://127.0.0.1').pathname;
-    if (path.length > 1 && path.endsWith('/')) {
-      return path.slice(0, -1);
+    const urlPath = new URL(url, 'http://127.0.0.1').pathname;
+    if (urlPath.length > 1 && urlPath.endsWith('/')) {
+      return urlPath.slice(0, -1);
     }
-    return path || '/';
+    return urlPath || '/';
   } catch {
     return url.split('?')[0] || '/';
   }
@@ -56,6 +59,25 @@ function applySecurityHeaders(response) {
   for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
     response.setHeader(name, value);
   }
+}
+
+function isInsideSiteRoot(resolvedPath) {
+  return resolvedPath === SITE_ROOT || resolvedPath.startsWith(SITE_ROOT + path.sep);
+}
+
+function withHtmlFileIfNeeded(requestUrl, pathname) {
+  if (pathname === '/' || path.posix.extname(pathname)) {
+    return requestUrl;
+  }
+
+  const htmlFile = path.resolve(SITE_ROOT, `.${pathname}.html`);
+  if (!isInsideSiteRoot(htmlFile) || !fs.existsSync(htmlFile)) {
+    return requestUrl;
+  }
+
+  const parsed = new URL(requestUrl, 'http://127.0.0.1');
+  parsed.pathname = `${pathname}.html`;
+  return parsed.pathname + parsed.search;
 }
 
 const server = http.createServer((request, response) => {
@@ -83,6 +105,8 @@ const server = http.createServer((request, response) => {
     response.end('Not found');
     return;
   }
+
+  request.url = withHtmlFileIfNeeded(request.url, pathname);
 
   return handler(request, response, {
     public: __dirname,
