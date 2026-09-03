@@ -5,20 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="DiveIQ — Android dive log and weight guidance for a single diver profile. Built by EM Projects." />
   <title>DiveIQ — Personal dive log &amp; weight assistant | EM Projects</title>
+  <link rel="canonical" href="https://em-projects.com/diveiq.html" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EM Projects" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="DiveIQ — Personal dive log &amp; weight assistant" />
+  <meta property="og:description" content="Android dive log and weight guidance for a single diver profile. Built by EM Projects." />
+  <meta property="og:url" content="https://em-projects.com/diveiq.html" />
+  <meta property="og:image" content="https://em-projects.com/assets/app_logo-card.png" />
+  <meta property="og:image:alt" content="DiveIQ app logo" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
         <img class="brand-mark" src="assets/em-projects-logo.svg" width="40" height="40" alt="" />
         EM Projects
       </a>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-      <nav class="nav" aria-label="Main">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="index.html#apps">Apps</a>
-        <a href="diveiq.html">DiveIQ</a>
+        <a href="diveiq.html" aria-current="page">DiveIQ</a>
+        <a href="divecenteriq.html">DiveCenterIQ</a>
         <a href="privacy.html">Privacy</a>
         <a href="index.html#contact">Contact</a>
       </nav>
@@ -32,7 +43,7 @@
     <p>Personal dive log and weight guidance for Android</p>
   </div>
 
-  <main>
+  <main id="main">
     <section>
       <h2>What is DiveIQ?</h2>
       <p class="lead">
@@ -64,7 +75,7 @@
         <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.em_projects.diveiq" rel="noopener noreferrer">
           View on Google Play
         </a>
-        <span style="color: var(--text-muted); font-size: 0.9rem; margin-left: 0.5rem;">(link active after listing is live)</span>
+        <span class="muted-note">(link active after listing is live)</span>
       </p>
     </section>
 
@@ -74,7 +85,7 @@
       <div class="contact-block">
         <a href="mailto:info@em-projects.com">info@em-projects.com</a>
       </div>
-      <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-muted);">
+      <p class="muted-note">
         Please include your Android version and a short description of the issue.
       </p>
     </section>
@@ -95,15 +106,13 @@
       <p>© <span id="year"></span> EM Projects · DiveIQ</p>
       <div class="footer-links">
         <a href="index.html">Home</a>
+        <a href="divecenteriq.html">DiveCenterIQ</a>
         <a href="privacy.html">Privacy</a>
         <a href="mailto:info@em-projects.com">Contact</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
