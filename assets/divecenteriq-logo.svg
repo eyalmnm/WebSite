@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DiveCenterIQ">
+  <defs>
+    <linearGradient id="dciq-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001F3F"/>
+      <stop offset="42%" stop-color="#0066A3"/>
+      <stop offset="100%" stop-color="#00CED1"/>
+    </linearGradient>
+    <linearGradient id="dciq-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#fff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="dciq-shop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#E0F7FA"/>
+    </linearGradient>
+    <linearGradient id="dciq-awning" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00CED1"/>
+      <stop offset="100%" stop-color="#40E0D0"/>
+    </linearGradient>
+    <clipPath id="dciq-flag">
+      <rect x="95" y="30" width="25" height="17" rx="1.6"/>
+    </clipPath>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="url(#dciq-bg)"/>
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="none" stroke="#40E0D0" stroke-opacity="0.45" stroke-width="2.2"/>
+  <rect width="128" height="128" rx="28" fill="url(#dciq-shine)"/>
+
+  <circle cx="104" cy="20" r="5" fill="#fff" fill-opacity="0.2"/>
+  <circle cx="94" cy="30" r="2.6" fill="#fff" fill-opacity="0.12"/>
+  <circle cx="22" cy="26" r="3.2" fill="#40E0D0" fill-opacity="0.4"/>
+
+  <!-- Dive shop -->
+  <path fill="url(#dciq-shop)" d="M20 54h60v46a8 8 0 0 1-8 8H28a8 8 0 0 1-8-8V54z"/>
+  <path fill="url(#dciq-awning)" d="M16 54l9-15h50l9 15H16z"/>
+  <path fill="#003D6B" fill-opacity="0.28" d="M16 54h68v3.2H16z"/>
+
+  <!-- Porthole windows -->
+  <circle cx="39" cy="74" r="9.5" fill="#003D6B"/>
+  <circle cx="39" cy="74" r="6.4" fill="#40E0D0" fill-opacity="0.38"/>
+  <circle cx="36.8" cy="71.6" r="2.2" fill="#fff" fill-opacity="0.55"/>
+  <circle cx="61" cy="74" r="9.5" fill="#003D6B"/>
+  <circle cx="61" cy="74" r="6.4" fill="#40E0D0" fill-opacity="0.38"/>
+  <circle cx="58.8" cy="71.6" r="2.2" fill="#fff" fill-opacity="0.55"/>
+
+  <!-- Door -->
+  <rect x="44" y="88" width="12.5" height="20" rx="2.6" fill="#001F3F"/>
+  <circle cx="53.6" cy="98.2" r="1.15" fill="#40E0D0"/>
+
+  <!-- Diver-down flag -->
+  <rect x="91.5" y="28" width="3.4" height="70" rx="1.7" fill="#E0F7FA"/>
+  <g clip-path="url(#dciq-flag)">
+    <rect x="95" y="30" width="25" height="17" fill="#C62828"/>
+    <path fill="#fff" d="M95 33.4l25 10.4v3.4L95 36.8z"/>
+  </g>
+
+  <!-- Wave -->
+  <path fill="none" stroke="#40E0D0" stroke-width="4" stroke-linecap="round"
+    d="M18 114c12-5.2 24-5.2 40 0s28 5.2 40 0"/>
+  <path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"
+    d="M22 110c10-3.2 20-3.2 36 0s24 3.2 36 0"/>
+</svg>

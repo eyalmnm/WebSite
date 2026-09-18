@@ -94,6 +94,7 @@ Canonical URLs, Open Graph tags, `robots.txt`, and `sitemap.xml` currently use `
 | `assets/favicon.svg` | Browser tab |
 | `assets/app_logo-card.png` | DiveIQ card + product page |
 | `assets/app_logo.png` | Full-resolution DiveIQ logo (source) |
+| `assets/divecenteriq-logo.svg` | DiveCenterIQ card + product page |
 
 To replace the DiveIQ logo, update `assets/app_logo.png` and regenerate smaller sizes:
 
