@@ -19,6 +19,10 @@ DiveCenterIQ
     ↓
 separate B2B application
 
+DivePassport
+    ↓
+future application
+
 SeaIQ
     ↓
 future application
@@ -42,7 +46,7 @@ It must **not**:
 - access DiveCenterIQ databases
 - share customer data with product applications
 - share `/data` volumes with product applications
-- implement authentication for DiveIQ, DiveCenterIQ, or SeaIQ
+- implement authentication for DiveIQ, DiveCenterIQ, DivePassport, or SeaIQ
 - become a backend for DiveCenterIQ (or any other product)
 - run analytics or tracking on the marketing pages
 
@@ -70,12 +74,12 @@ The Node server also sets baseline security headers (`X-Content-Type-Options`, `
 | `/privacy.html` | DiveIQ privacy policy |
 | `/robots.txt`, `/sitemap.xml` | Crawler hints |
 
-SeaIQ is listed on the home page as planned. It has no product page yet.
+DivePassport and SeaIQ are listed on the home page as future/planned products. They have no product pages yet.
 
 ## Privacy documentation
 
 - `privacy.html` covers **DiveIQ** only.
-- It does not describe DiveCenterIQ or SeaIQ data processing.
+- It does not describe DiveCenterIQ, DivePassport, or SeaIQ data processing.
 
 **TODO:** Add a DiveCenterIQ-specific privacy policy before DiveCenterIQ is offered to customers. Keep it in the DiveCenterIQ product (or a dedicated legal page), not as a claim that the current DiveIQ policy already covers that product.
 

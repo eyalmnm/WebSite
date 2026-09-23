@@ -12,6 +12,7 @@ This site is **not** a product application, **not** a backend, and **not** an au
 EM Projects Website     →  public marketing site (this repo)
 DiveIQ                  →  separate product / application
 DiveCenterIQ            →  separate B2B product / application
+DivePassport            →  future product
 SeaIQ                   →  future product
 ```
 
@@ -30,9 +31,10 @@ See [docs/WEBSITE_ARCHITECTURE.md](docs/WEBSITE_ARCHITECTURE.md).
 |---------|------|---------------------|
 | DiveIQ | Personal diving | Coming soon on Google Play |
 | DiveCenterIQ | Dive center management | Coming soon |
+| DivePassport | Portable identity + trusted experience | Future |
 | SeaIQ | Maritime / sailing | Planned (coming later) |
 
-Do not present DiveCenterIQ or SeaIQ as live production services.
+Do not present DiveCenterIQ, DivePassport, or SeaIQ as live production services.
 
 ## Pages
 
