@@ -29,7 +29,7 @@ See [docs/WEBSITE_ARCHITECTURE.md](docs/WEBSITE_ARCHITECTURE.md).
 
 | Product | Role | Status on this site |
 |---------|------|---------------------|
-| DiveIQ | Personal diving | Coming soon on Google Play |
+| DiveIQ | Personal diving | Available on Google Play |
 | DiveCenterIQ | Dive center management | Coming soon |
 | DivePassport | Portable identity + trusted experience | Future |
 | SeaIQ | Maritime / sailing | Planned (coming later) |
